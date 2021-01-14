@@ -24,8 +24,8 @@ for (let i = 1; i < numbers.length; ++i) {
 }
 
 // 2. Apply
-Math.min.apply(Math, numbers);
-Math.max.apply(Math, numbers);
+Math.min.apply(null, numbers);
+Math.max.apply(null, numbers);
 
 // 3. ES6
 Math.min(...numbers);
