@@ -5,15 +5,15 @@
 */
 
 function twoSum(numbers: number[], target: number) {
-    const numbersMap = new Map();
-
-    for (let i=0; i < numbers.length; i++) {
-        const number = numbers[i];
-
-        if (numbersMap.has(number)) {
-            return [numbersMap.get(number), i]
-        } else {
-            numbersMap.set((target - number), i)
+    const hashmap = new Map();
+    
+    for (var index = 0; index < numbers.length; index++) {
+        var complement = target - numbers[index];
+        
+        if (hashmap.has(complement)) {
+            return [index, hashmap.get(complement)]
         }
+        
+        hashmap.set(numbers[index], index)
     }
 }
